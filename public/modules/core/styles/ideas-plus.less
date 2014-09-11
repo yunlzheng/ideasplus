@@ -1,13 +1,13 @@
-.plus-container{
+.plus-container {
   padding-left: 10px;
   padding-right: 10px;
   margin-top: -20px;
 }
 
-.plus-container-hero{
+.plus-container-hero {
   height: 260px;
   background-color: #dddddd;
-  h2{
+  h2 {
     position: relative;
     z-index: 10;
     font-size: 40px;
@@ -25,19 +25,80 @@
   .plus-nav {
     li {
       display: inline-block;
-      &.active{
+      &.active {
         a {
           color: #4764cf;
         }
       }
-      a{
+      a {
         color: #878787;
-
 
       }
     }
   }
 }
+
+.plus-project-card {
+  .wrapper {
+    width: 980px;
+    margin: 0 auto;
+    .main-title {
+      color: #646878;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.5;
+      text-align: center;
+      padding-top: 66px;
+      margin: 0;
+    }
+    .project-title {
+      position: relative;
+      font-size: 16px;
+      color: #646878;
+      text-align: center;
+      margin-bottom: 10px;
+      &:before {
+        content: '';
+        width: 100%;
+        border-top: 1px solid #e0e0e0;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 0;
+      }
+    }
+  }
+  .project-card-items {
+    margin: 0 0 50px;
+    padding: 0;
+    .project-card-item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      width: 280px;
+      margin-right: 46px;
+      margin-bottom: 23px;
+
+      .cool {
+        position: relative;
+        height: 280px;
+        border-radius: 50%;
+        background-color: #0b97c4;
+        .front {
+          .box {
+
+          }
+        }
+      }
+      .desc {
+        text-align: center;
+      }
+
+    }
+  }
+
+}
+
 
 
 

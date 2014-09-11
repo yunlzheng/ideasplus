@@ -1,21 +1,22 @@
 var express = require('express');
 var path = require('path');
-var app = express();
+var routes = require("./routes/index")
 
+var app = module.exports = express();
+
+/**
+ * Configuration
+ */
+app.set('view engine', 'jade');
+app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.resolve('./public')));
 
-app.engine('jade', require('jade').__express);
-app.set('view engine', 'jade');
+app.get('/', routes.index);
+app.get('/partial/:name', routes.partial);
 
-
-app.get('/hello.txt', function (req, res) {
-    res.send('Hello World');
-});
-
-app.get('/', function (req, res) {
-    res.render('index', { title: 'Hey', message: 'Hello there! You can share your idea and build a term'});
-})
-
-var server = app.listen(3000, function () {
+/**
+ * Start Server
+ */
+var server = app.listen(app.get("port"), function () {
     console.log('Listening on port %d', server.address().port);
 });

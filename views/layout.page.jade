@@ -1,0 +1,8 @@
+doctype html
+html(lang="en")
+  head
+    block head
+  body(ng-app="ideasPlus")
+    .plus-header(ng-include="'partial/header'")
+    .plus-container.container-fluid
+      block content

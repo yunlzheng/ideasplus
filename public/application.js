@@ -8,7 +8,7 @@ function httpProvider($httpProvider) {
 function routeProvider($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'modules/core/views/index.html',
+            templateUrl: 'partial/index',
             controller: 'IndexCtrl',
             label: '主页'
         })

@@ -12,6 +12,21 @@ function routeProvider($routeProvider) {
             controller: 'IndexCtrl',
             label: '主页'
         })
+        .when('/recruiting', {
+            templateUrl: 'partial/recruiting',
+            controller: 'RecruitCtrl',
+            label: '招募'
+        })
+        .when('/projects', {
+            templateUrl: 'partial/project',
+            controller: 'ProjectCtrl',
+            label: '项目'
+        })
+        .when('/persons', {
+            templateUrl: 'partial/person',
+            controller: "PersonCtrl",
+            label: '人物'
+        })
         .otherwise({
             redirectTo: '/'
         });

@@ -51,3 +51,64 @@
   padding-top: 66px;
   margin: 0;
 }
+.flip-slice {
+  min-width: 280px;
+  min-height: 280px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip-container {
+  /*  UPDATED! front pane, placed above back */
+  /* back, initially hidden pane */
+  /* flip speed goes here */
+}
+.flip-container .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+  min-width: 280px;
+  min-height: 280px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip-container.vertical {
+  position: relative;
+}
+.flip-container.vertical .back {
+  transform: rotateX(180deg);
+}
+.flip-container.vertical:hover .back {
+  transform: rotateX(0deg);
+}
+.flip-container.vertical:hover .front {
+  transform: rotateX(180deg);
+}
+.flip-container .back {
+  transform: rotateY(-180deg);
+  min-width: 280px;
+  min-height: 280px;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.flip-container:hover .back {
+  transform: rotateY(0deg);
+}
+.flip-container:hover .front {
+  transform: rotateY(180deg);
+}
+.flip-container .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}

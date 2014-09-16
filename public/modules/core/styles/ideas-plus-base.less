@@ -1,13 +1,13 @@
 .wrapper {
   width: 1010px;
   margin: 0 auto;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .plus-hr-title {
   text-align: center;
   position: relative;
-  word-break:break-all;
+  word-break: break-all;
   span {
     padding: 0 12px;
     background-color: #fff;
@@ -28,7 +28,7 @@
 
   text-align: center;
   position: relative;
-  word-break:break-all;
+  word-break: break-all;
   span {
     padding: 6px 12px;
     background-color: #fff;
@@ -55,4 +55,69 @@
   text-align: center;
   padding-top: 66px;
   margin: 0;
+}
+
+.flip-slice {
+
+  min-width: 280px;
+  min-height: 280px;
+
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flip-container {
+  /*  UPDATED! front pane, placed above back */
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    .flip-slice
+  }
+
+  &.vertical {
+    position: relative;
+
+    .back {
+      transform: rotateX(180deg);
+    }
+
+    &:hover {
+      .back {
+        transform: rotateX(0deg);
+      }
+      .front {
+        transform: rotateX(180deg);
+      }
+    }
+
+  }
+
+  /* back, initially hidden pane */
+  .back {
+    transform: rotateY(-180deg);
+    .flip-slice
+  }
+
+  &:hover {
+    .back {
+      transform: rotateY(0deg);
+    }
+    .front {
+      transform: rotateY(180deg);
+    }
+  }
+
+  /* flip speed goes here */
+  .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+    position: relative;
+  }
+
 }

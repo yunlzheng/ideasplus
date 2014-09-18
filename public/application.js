@@ -18,9 +18,13 @@ function routeProvider($routeProvider) {
             label: '招募'
         })
         .when('/projects', {
-            templateUrl: 'partial/project',
+            templateUrl: 'partial/projects',
             controller: 'ProjectCtrl',
             label: '项目'
+        })
+        .when('/projects/:id', {
+            templateUrl: 'partial/project',
+            label: '项目详情'
         })
         .when('/persons', {
             templateUrl: 'partial/person',

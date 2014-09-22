@@ -20,3 +20,5 @@ app.get('/partial/:name', routes.partial);
 var server = app.listen(app.get("port"), function () {
     console.log('Listening on port %d', server.address().port);
 });
+
+exports.app = app;

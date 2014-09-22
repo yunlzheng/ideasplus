@@ -1,9 +1,9 @@
 extends layout.page
 
 block append head
-  title!= title
-  link(href="/lib/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
-  link(href="/modules/core/styles/ideas-plus.css", rel="stylesheet")
+    title!= title
+    link(href="/lib/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
+    link(href="/modules/core/styles/ideas-plus.css", rel="stylesheet")
 block append content
     div(ng-view='')
     script(src="/lib/jquery/dist/jquery.js")
@@ -14,16 +14,13 @@ block append content
     script(src="/lib/angular-cookies/angular-cookies.min.js")
     script(src="/lib/angular-resource/angular-resource.min.js")
     script(src="/lib/angular-sanitize/angular-sanitize.min.js")
-
     script(src="/lib/angular-bootstrap/ui-bootstrap.min.js")
     script(src="/lib/angular-bootstrap/ui-bootstrap-tpls.min.js")
-
     script(src="/lib/angular-touch/angular-touch.min.js")
-
     script(src="/application.js")
+
     script(src="/modules/core/controllers/index.controller.js")
     script(src="/modules/project/controllers/project.controller.js")
     script(src="/modules/person/controllers/person.controller.js")
     script(src="/modules/recruting/controllers/recurting.controller.js")
-
-
+    script(src="http://localhost:35729/livereload.js")

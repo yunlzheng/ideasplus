@@ -20,7 +20,7 @@ gulp.task('serve', function () {
 });
 
 gulp.task('watch', function () {
-    livereload.listen();
+    livereload.listen(livereloadport);
     gulp.watch('views/**').on('change', livereload.changed);
 });
 
